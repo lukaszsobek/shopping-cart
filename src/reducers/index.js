@@ -1,3 +1,7 @@
+import cartContent from "./cartContent";
+
 export default function() {
-    return "";
+    return {
+        cartContent: cartContent()
+    };
 }
