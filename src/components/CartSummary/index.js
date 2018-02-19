@@ -32,20 +32,16 @@ class CartSummary extends Component {
     // constructs a jsx list of tax rates and values
     constructTaxSummary(tax_breakdown) {
 
-        const outArr = [];
+        return Object.keys(tax_breakdown).map((id, key) => {
 
-        for(const item in tax_breakdown) {
-
-            const roundedTax = currencyRound(tax_breakdown[item]);
-
-            outArr.push(
-                <div className="tax-rate">
-                    <div className="label">{ item }%</div>
+            const roundedTax = currencyRound(tax_breakdown[id]);
+            return (
+                <div key={key} className="tax-rate">
+                    <div className="label">{ id }%</div>
                     <div className="value">{ roundedTax }&euro;</div>
-                </div>
+                </div>                
             );
-        }
-        return outArr;
+        });
     }
 
     render() {

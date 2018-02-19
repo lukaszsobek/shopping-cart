@@ -21,6 +21,7 @@ class CartItems extends Component {
         return cartContent.map((item, key) =>{
             return (
                 <CartItem
+                    key={ key }
                     id={ key }
                     number={ key + 1}
                     name={ item.name }
