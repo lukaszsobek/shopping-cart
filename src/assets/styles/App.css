@@ -58,16 +58,41 @@ button.add-item {
 .cart-content-header {
   background: var(--navy);
   color: var(--white);
-  margin: 20px;
+  margin: 20px 20px 0 20px;
   padding: 10px;
   display: flex;
-
 }
 
 .cart-item {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey);
   display: flex;
+  padding: 10px;
+  margin: 0 20px;
 }
 
+/* == Cart Summary == */
+
+.cart-summary {
+  margin: 20px;
+  max-width: 200px;
+  margin-left: auto;
+}
+
+.net-total,
+.gross-total,
+.tax-rate {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.cart-summary .label,
+.cart-summary .value {
+  padding: 5px;
+}
 
 /* == Media Queries == */
 

@@ -4,8 +4,6 @@ import { connect } from "react-redux";
 import CartContentHeader from "./CartContentHeader";
 import CartItems from "./CartItems";
 
-import cartContent from "../../reducers/cartContent";
-
 class CartContent extends Component {
     render() {
         return (
@@ -18,7 +16,6 @@ class CartContent extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state);
     return {
         cartContent: state.cartContent
     }
