@@ -5,11 +5,6 @@ import { currencyRound } from "../../utils";
 
 class CartSummary extends Component {
 
-    constructor(props) {
-        super(props);
-        this.cartSummary = this.calculateSummary(props.cartContent);
-    }
-
     calculateSummary(itemArray) {
 
         const summaryObj = {
@@ -52,7 +47,8 @@ class CartSummary extends Component {
     }
 
     render() {
-        const { net_total, gross_total, tax_breakdown } = this.cartSummary;
+        const cartSummary = this.calculateSummary(this.props.cartContent);
+        const { net_total, gross_total, tax_breakdown } = cartSummary;
 
         return (
             <div className="cart-summary">
@@ -73,10 +69,8 @@ class CartSummary extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        cartContent: state.cartContent
-    }
-}
+const mapStateToProps = state => ({
+    cartContent: state.cartContent
+});
 
 export default connect(mapStateToProps)(CartSummary);
