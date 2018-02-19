@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Button from "../shared/Button";
 import { clearAll, addItem } from "../../actions";
 
-class TopBar extends Component {
+class CartHeader extends Component {
 
     render() {
         return (
@@ -41,4 +41,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(null, mapDispatchToProps)(TopBar);
+export default connect(null, mapDispatchToProps)(CartHeader);
