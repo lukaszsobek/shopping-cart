@@ -5,6 +5,7 @@ import { currencyRound } from "../../utils";
 
 class CartSummary extends Component {
 
+    // calculates the values needed to create the cart summary
     calculateSummary(itemArray) {
 
         const summaryObj = {
@@ -28,6 +29,7 @@ class CartSummary extends Component {
         return summaryObj;
     }
 
+    // constructs a jsx list of tax rates and values
     constructTaxSummary(tax_breakdown) {
 
         const outArr = [];

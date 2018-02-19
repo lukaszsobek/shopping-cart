@@ -1,6 +1,7 @@
 import {
     ADD_ITEM,
-    CLEAR_ALL
+    CLEAR_ALL,
+    DELETE_ITEM
 } from "../constants/index";
 
 const initialState = {
@@ -32,16 +33,27 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
 
-    const randomItem = Math.floor(Math.random() * state.availableProducts.length);
+    const { availableProducts, cartContent } = state;
+    const randomItem = Math.floor(Math.random() * availableProducts.length);
 
     switch(action.type) {
-        case CLEAR_ALL:
-            return { ...state, cartContent: action.cartContent }
         case ADD_ITEM:
             return { 
                 ...state,
-                cartContent: state.cartContent.concat(state.availableProducts[randomItem])
+                cartContent: cartContent.concat(availableProducts[randomItem])
             }
+
+        case CLEAR_ALL:
+            return { ...state, cartContent }
+
+        case DELETE_ITEM:
+            return {
+                ...state,
+                cartContent: cartContent.filter((item,id) => {
+                    return id !== action.deleteItemId;
+                })
+            }
+
         default:
             return state
     }

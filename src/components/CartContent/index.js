@@ -1,24 +1,15 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React from "react";
 
 import CartContentHeader from "./CartContentHeader";
 import CartItems from "./CartItems";
 
-class CartContent extends Component {
-    render() {
+const CartContent = () => {
         return (
             <div className="cart-content">
                 <CartContentHeader />
-                <CartItems itemList={this.props.cartContent}/>
+                <CartItems />
             </div>
         );
-    }
-}
+};
 
-function mapStateToProps(state) {
-    return {
-        cartContent: state.cartContent
-    }
-}
-
-export default connect(mapStateToProps)(CartContent);
+export default CartContent;

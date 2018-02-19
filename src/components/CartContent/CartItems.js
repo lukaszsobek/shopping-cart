@@ -1,28 +1,50 @@
-import React from "react";
-
+import React, { Component } from "react";
 import CartItem from "./CartItem";
 
-const CartItems = (props) => {
-    if(!props.itemList.length) {
-        return (
-            <div className="no-items">
-                Add an item to the cart
-            </div>
-        )
-    }
+import { deleteItem } from "../../actions";
 
-    return props.itemList.map((item, key) =>{
-        return (
-            <CartItem
-                key={ key }
-                number={ key + 1}
-                name={ item.name }
-                comments={ item.comments }
-                net_price={ item.net_price }
-                tax={ item.tax }
-            />
-        );
-    });
+import { connect } from "react-redux";
+
+class CartItems extends Component {
+
+    render() {
+        const { cartContent, deleteItem } = this.props;
+
+        if(!cartContent.length) {
+            return (
+                <div className="no-items">
+                    Add an item to the cart
+                </div>
+            )
+        }
+
+        return cartContent.map((item, key) =>{
+            return (
+                <CartItem
+                    id={ key }
+                    number={ key + 1}
+                    name={ item.name }
+                    comments={ item.comments }
+                    net_price={ item.net_price }
+                    tax={ item.tax }
+                    deleteItem={ deleteItem }
+                />
+            );
+        });
+
+    }
 };
 
-export default CartItems;
+function mapStateToProps(state) {
+    return {
+        cartContent: state.cartContent
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        deleteItem: item => dispatch(deleteItem(item))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CartItems);
