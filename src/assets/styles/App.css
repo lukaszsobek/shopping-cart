@@ -28,7 +28,7 @@ button:focus {
 }
 
 .shopping-cart {
-  max-width: 850px;
+  max-width: 650px;
   margin: 20px auto;
 }
 
@@ -58,17 +58,31 @@ button.add-item {
 .cart-content-header {
   background: var(--navy);
   color: var(--white);
+  display: flex;
   margin: 20px 20px 0 20px;
   padding: 10px;
-  display: flex;
 }
 
 .cart-item {
   background: var(--white);
   border-bottom: 1px solid var(--grey);
   display: flex;
-  padding: 10px;
   margin: 0 20px;
+  padding: 10px;
+}
+
+.item-number      { width: 25px; }
+.item-name        { width: 140px; }
+.item-comments    { width: 140px; }
+.item-net-price   { width: 80px; }
+.item-tax         { width: 80px; }
+.item-gross-price { width: 80px; }
+.delete-item      { width: 30px; }
+
+.delete-item-button {
+  padding: 2px 5px;
+  color: var(--white);
+  background: var(--red);
 }
 
 .no-items {

@@ -16,7 +16,6 @@ Currently missing features:
 - Adding items manually (currently an item is picked randomly)
 - Popup modal for editing items (no editing for now)
 - Tests (only render is tested)
-- Product table styling (the output needs spacing and structure)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
