@@ -71,6 +71,15 @@ button.add-item {
   margin: 0 20px;
 }
 
+.no-items {
+  background: var(--white);
+  font-style: italic;
+  border-bottom: 1px solid var(--grey);
+  display: flex;
+  padding: 10px;
+  margin: 0 20px;
+}
+
 /* == Cart Summary == */
 
 .cart-summary {
