@@ -5,8 +5,7 @@ import {
 } from "../constants/index";
 
 export const clearAll = () => ({
-    type: CLEAR_ALL,
-    cartContent: []
+    type: CLEAR_ALL
 });
 
 export const addItem = item => ({

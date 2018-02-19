@@ -44,7 +44,10 @@ const rootReducer = (state = initialState, action) => {
             }
 
         case CLEAR_ALL:
-            return { ...state, cartContent }
+            return {
+                ...state,
+                cartContent: []
+            }
 
         case DELETE_ITEM:
             return {
