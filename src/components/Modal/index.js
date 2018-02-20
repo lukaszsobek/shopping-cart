@@ -2,23 +2,33 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 
-import { addItem } from "../../actions";
+import { addItem, closeModal } from "../../actions";
+
+import ModalPanel from "./ModalPanel" ;
 
 class Modal extends Component {
     render() {
-        if(!this.props.isModalShown) {
+        const { closeModal, isModalShown, panelType } = this.props;
+
+        if(!isModalShown) {
             return null;
         }
 
-        const renderContent = <div className="panel">Test</div>;
+        const renderContent = (
+            <div className="modal">
+                <ModalPanel
+                    panelType={panelType}
+                    closeModal={closeModal}
+                />
+            </div>
+        )
+
         const renderTarget = document.querySelector("#modalRoot");
 
         return ReactDOM.createPortal(
-            <div className="modal">
-             { renderContent }
-            </div>,
+            renderContent,
             renderTarget
-          );
+        );
     }
 }
 
@@ -31,7 +41,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch =>  {
     return {
-        addItem: () => dispatch(addItem())
+        addItem: () => dispatch(addItem()),
+        closeModal: () => dispatch(closeModal())
     }
 }
 

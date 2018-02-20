@@ -1,6 +1,7 @@
 import {
     ADD_ITEM,
     CLEAR_ALL,
+    CLOSE_MODAL,
     DELETE_ITEM,
     OPEN_ADD_ITEM_MODAL
 } from "../constants";
@@ -49,6 +50,12 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 cartContent: []
+            }
+
+        case CLOSE_MODAL:
+            return {
+                ...state,
+                isModalShown: false
             }
 
         case DELETE_ITEM:
