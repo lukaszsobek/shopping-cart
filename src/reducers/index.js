@@ -3,7 +3,7 @@ import {
     CLEAR_ALL,
     DELETE_ITEM,
     OPEN_ADD_ITEM_MODAL
-} from "../constants/index";
+} from "../constants";
 
 const initialState = {
     availableProducts: [
