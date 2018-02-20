@@ -1,7 +1,8 @@
 import {
     ADD_ITEM,
     CLEAR_ALL,
-    DELETE_ITEM
+    DELETE_ITEM,
+    OPEN_ADD_ITEM_MODAL
 } from "../constants/index";
 
 const initialState = {
@@ -28,6 +29,7 @@ const initialState = {
             tax: 7
         }
     ],
+    isModalShown: false,
     cartContent: [] 
 };
 
@@ -55,6 +57,12 @@ const rootReducer = (state = initialState, action) => {
                 cartContent: cartContent.filter((item,id) => {
                     return id !== action.deleteItemId;
                 })
+            }
+
+        case OPEN_ADD_ITEM_MODAL:
+            return {
+                ...state,
+                isModalShown: true
             }
 
         default:

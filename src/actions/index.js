@@ -1,7 +1,8 @@
 import {
     ADD_ITEM,
     CLEAR_ALL,
-    DELETE_ITEM
+    DELETE_ITEM,
+    OPEN_ADD_ITEM_MODAL
 } from "../constants/index";
 
 export const clearAll = () => ({
@@ -16,4 +17,8 @@ export const addItem = item => ({
 export const deleteItem = itemId => ({
     type: DELETE_ITEM,
     deleteItemId: itemId
+});
+
+export const openAddItemModal = () => ({
+    type: OPEN_ADD_ITEM_MODAL
 });
