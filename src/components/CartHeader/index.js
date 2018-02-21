@@ -34,11 +34,9 @@ class CartHeader extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        clearAll: () => dispatch(clearAll()),
-        openAddItemModal: () => dispatch(openAddItemModal())
-    };
-};
+const mapDispatchToProps = dispatch => ({
+    clearAll: () => dispatch(clearAll()),
+    openAddItemModal: () => dispatch(openAddItemModal())
+});
 
 export default connect(null, mapDispatchToProps)(CartHeader);

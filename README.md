@@ -18,7 +18,6 @@ Currently missing features:
 
 Planned refactors:
 - Make CartContent a container to make testing easier
-- Clean up map statements to be less verbose
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

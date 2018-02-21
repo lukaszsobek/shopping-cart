@@ -36,16 +36,12 @@ class CartItems extends Component {
     }
 };
 
-function mapStateToProps(state) {
-    return {
-        cartContent: state.cartContent
-    }
-}
+const mapStateToProps = state => ({
+    cartContent: state.cartContent
+});
 
-function mapDispatchToProps(dispatch) {
-    return {
-        deleteItem: item => dispatch(deleteItem(item))
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    deleteItem: item => dispatch(deleteItem(item))
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartItems);
