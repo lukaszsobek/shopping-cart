@@ -1,6 +1,6 @@
 import {
     ADD_ITEM,
-    CLEAR_ALL,
+    CLEAR_ALL_ITEMS,
     CLOSE_MODAL,
     DELETE_ITEM,
     OPEN_ADD_ITEM_MODAL,
@@ -21,7 +21,7 @@ const rootReducer = (state = initialState, action) => {
                 cartContent: cartContent.concat(action.item)
             }
 
-        case CLEAR_ALL:
+        case CLEAR_ALL_ITEMS:
             return {
                 ...state,
                 cartContent: []
@@ -58,7 +58,7 @@ const rootReducer = (state = initialState, action) => {
         case UPDATE_ITEM:
             const { itemId, item } = action;
 
-            const newCartContent = [...state.cartContent];
+            const newCartContent = [...cartContent];
             newCartContent[itemId] = item;
 
             return {

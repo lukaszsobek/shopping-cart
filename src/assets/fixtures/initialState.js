@@ -24,9 +24,6 @@ const initialState = {
     ],
     cartContent: [],
     editItemId: null,
-    formContent: {
-        comment: ""
-    },
     isModalShown: false
 };
 

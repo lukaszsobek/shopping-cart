@@ -1,6 +1,6 @@
 import {
     ADD_ITEM,
-    CLEAR_ALL,
+    CLEAR_ALL_ITEMS,
     CLOSE_MODAL,
     DELETE_ITEM,
     OPEN_ADD_ITEM_MODAL,
@@ -13,8 +13,8 @@ export const addItem = item => ({
     item
 });
 
-export const clearAll = () => ({
-    type: CLEAR_ALL
+export const clearAllItems = () => ({
+    type: CLEAR_ALL_ITEMS
 });
 
 export const closeModal = () => ({
@@ -23,7 +23,7 @@ export const closeModal = () => ({
 
 export const deleteItem = itemId => ({
     type: DELETE_ITEM,
-    itemId: itemId
+    itemId
 });
 
 export const openEditItemModal = itemId => ({

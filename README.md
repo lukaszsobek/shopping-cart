@@ -21,8 +21,4 @@ Currently missing features:
 - Flowtype
 - Handling network problems (no-connection, slow connection etc.)
 
-Planned refactors:
-- Modal state and id should be in one property
-- Property names should reflect whether an id or item is passed
-
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

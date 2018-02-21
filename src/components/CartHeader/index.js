@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import Button from "../shared/Button";
-import { clearAll, openAddItemModal } from "../../actions";
+import { clearAllItems, openAddItemModal } from "../../actions";
 
 class CartHeader extends Component {
 
     render() {
+        const { clearAllItems, openAddItemModal } = this.props
+
         return (
             <div className="top-bar">
             
@@ -18,13 +20,13 @@ class CartHeader extends Component {
 
                     <Button
                         className="clear-cart"
-                        action={ this.props.clearAll }
+                        action={ clearAllItems }
                         label="Clear Cart"
                     />
 
                     <Button
                         className="add-item"
-                        action={ this.props.openAddItemModal }
+                        action={ openAddItemModal }
                         label="Add Product"
                     />
 
@@ -35,7 +37,7 @@ class CartHeader extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    clearAll: () => dispatch(clearAll()),
+    clearAllItems: () => dispatch(clearAllItems()),
     openAddItemModal: () => dispatch(openAddItemModal())
 });
 
