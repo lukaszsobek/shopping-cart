@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creates actions for cart adding an item 1`] = `
+Object {
+  "item": "test item",
+  "type": "ADD_ITEM",
+}
+`;
+
+exports[`Creates actions for cart clearing all items 1`] = `
+Object {
+  "type": "CLEAR_ALL_ITEMS",
+}
+`;
+
+exports[`Creates actions for cart deleting an item 1`] = `
+Object {
+  "itemId": 4,
+  "type": "DELETE_ITEM",
+}
+`;
+
+exports[`Creates actions for cart updating an item 1`] = `
+Object {
+  "item": "test item",
+  "itemId": 4,
+  "type": "UPDATE_ITEM",
+}
+`;
+
+exports[`Creates actions for modal closing modal 1`] = `
+Object {
+  "type": "CLOSE_MODAL",
+}
+`;
+
+exports[`Creates actions for modal opening add item modal 1`] = `
+Object {
+  "type": "OPEN_ADD_ITEM_MODAL",
+}
+`;
+
+exports[`Creates actions for modal opening edit item modal 1`] = `
+Object {
+  "itemId": 4,
+  "type": "OPEN_EDIT_ITEM_MODAL",
+}
+`;
