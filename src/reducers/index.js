@@ -62,6 +62,7 @@ const rootReducer = (state = initialState, action) => {
             newCartContent[itemId] = item;
 
             return {
+                ...state,
                 cartContent: newCartContent 
             }
 

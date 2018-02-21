@@ -34,8 +34,9 @@ class ModalForm extends Component {
     componentDidMount() {
         const { editItemId, cartContent } = this.props;
 
-        // set edit mode
-        if(editItemId === null) { return; }
+        if(editItemId === null) {
+            return;
+        }
         this.isEditingItem = true;
         const { comments, sourceId } = cartContent[editItemId];
 
@@ -67,6 +68,8 @@ class ModalForm extends Component {
             sourceId: productIndex
         }
 
+        console.log(this.state)
+
        if(!this.isEditingItem) {
             addItem(item);
        } else {
@@ -78,8 +81,6 @@ class ModalForm extends Component {
 
     render() {
         const { availableProducts, editItemId } = this.props;
-
-        // handle edit items
 
         return (
             <form
@@ -116,11 +117,16 @@ class ModalForm extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    availableProducts: state.availableProducts,
-    cartContent: state.cartContent,
-    editItemId: state.editItemId
-});
+const mapStateToProps = state => {
+
+    console.log(state);
+
+    return {
+        availableProducts: state.availableProducts,
+        cartContent: state.cartContent,
+        editItemId: state.editItemId
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
     addItem: item => dispatch(addItem(item)),

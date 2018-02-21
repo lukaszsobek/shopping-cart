@@ -13,9 +13,6 @@ Currently implemented features:
 - Can see cart summary below cart (net + gross)
 - Can see tax amounts separated by tax amount
 
-Known bugs:
-- Trying to edit an item for the second time crashes the application
-
 Currently missing features:
 - Tests (only render is tested)
 - Flowtype
