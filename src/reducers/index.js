@@ -30,20 +30,19 @@ const initialState = {
             tax: 7
         }
     ],
-    isModalShown: false,
-    cartContent: [] 
+    cartContent: [],
+    isModalShown: false
 };
 
 const rootReducer = (state = initialState, action) => {
 
-    const { availableProducts, cartContent } = state;
-    const randomItem = Math.floor(Math.random() * availableProducts.length);
+    const { cartContent } = state;
 
     switch(action.type) {
         case ADD_ITEM:
             return { 
                 ...state,
-                cartContent: cartContent.concat(availableProducts[randomItem])
+                cartContent: cartContent.concat(action.item)
             }
 
         case CLEAR_ALL:

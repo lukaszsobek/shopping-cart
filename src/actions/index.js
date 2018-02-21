@@ -8,7 +8,7 @@ import {
 
 export const addItem = item => ({
     type: ADD_ITEM,
-    addItem: item
+    item
 });
 
 export const clearAll = () => ({

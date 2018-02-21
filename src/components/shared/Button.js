@@ -1,11 +1,14 @@
 import React from "react";
 
 const Button = (props) => {
-    const { action, className, label } = props;
+    const { action, className, label, type } = props;
     return (
         <button
             className={ className }
-            onClick={ action }>{ label }</button>
+            onClick={ action }
+            type={type}
+        
+        >{ label }</button>
     );
 }
 

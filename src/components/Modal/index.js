@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 
-import { addItem, closeModal } from "../../actions";
+import { closeModal } from "../../actions";
+import Button from "../shared/Button";
 
-import ModalPanel from "./ModalPanel" ;
+import ModalForm from "./ModalForm" ;
 
 class Modal extends Component {
     render() {
-        const { closeModal, isModalShown, panelType } = this.props;
+        const { closeModal, isModalShown } = this.props;
 
         if(!isModalShown) {
             return null;
@@ -16,10 +17,14 @@ class Modal extends Component {
 
         const renderContent = (
             <div className="modal">
-                <ModalPanel
-                    panelType={panelType}
-                    closeModal={closeModal}
-                />
+                <div className="modal-panel">
+                    <ModalForm />
+                    <Button
+                        action={ closeModal }
+                        className="close-modal-button"
+                        label="Close"
+                    />
+                </div>
             </div>
         )
 
@@ -32,18 +37,12 @@ class Modal extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        availableProducts: state.availableProducts,
-        isModalShown: state.isModalShown
-    }
-}
+const mapStateToProps = state => ({
+    isModalShown: state.isModalShown
+});
 
-const mapDispatchToProps = dispatch =>  {
-    return {
-        addItem: () => dispatch(addItem()),
-        closeModal: () => dispatch(closeModal())
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    closeModal: () => dispatch(closeModal())
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);

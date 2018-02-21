@@ -51,9 +51,14 @@ button:focus {
   justify-content: center;
 }
 
-.panel {
+.modal-panel {
   padding: 40px;
   background: var(--white);
+}
+
+.modal-panel-input {
+  display: block;
+  margin: 20px 0;
 }
 
 /* == Top Bar == */
