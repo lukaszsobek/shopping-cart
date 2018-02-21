@@ -22,10 +22,7 @@ Currently missing features:
 - Handling network problems (no-connection, slow connection etc.)
 
 Planned refactors:
-- Make CartContent a container to make testing easier
 - Modal state and id should be in one property
 - Property names should reflect whether an id or item is passed
-- Remove unused actions
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

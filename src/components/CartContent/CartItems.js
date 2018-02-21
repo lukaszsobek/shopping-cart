@@ -1,14 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import CartItem from "./CartItem";
 
-import { deleteItem, openEditItemModal } from "../../actions";
-
-import { connect } from "react-redux";
-
-class CartItems extends Component {
-
-    render() {
-        const { cartContent, deleteItem, openEditItemModal } = this.props;
+const CartItems = props => {
+        const { cartContent, deleteItem, openEditItemModal } = props;
 
         if(!cartContent.length) {
             return (
@@ -33,17 +27,6 @@ class CartItems extends Component {
                 />
             );
         });
-
-    }
 };
 
-const mapStateToProps = state => ({
-    cartContent: state.cartContent
-});
-
-const mapDispatchToProps = dispatch => ({
-    deleteItem: item => dispatch(deleteItem(item)),
-    openEditItemModal: item => dispatch(openEditItemModal(item))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartItems);
+export default CartItems;

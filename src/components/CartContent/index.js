@@ -1,15 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import CartContentHeader from "./CartContentHeader";
 import CartItems from "./CartItems";
 
-const CartContent = () => {
+import { deleteItem, openEditItemModal } from "../../actions";
+
+class CartContent extends Component {
+    render() {
+        const { cartContent, deleteItem, openEditItemModal } = this.props;
+
         return (
             <div className="cart-content">
                 <CartContentHeader />
-                <CartItems />
+                <CartItems
+                    cartContent={ cartContent }
+                    deleteItem={ deleteItem }
+                    openEditItemModal={ openEditItemModal }
+                />
             </div>
         );
+    }
 };
 
-export default CartContent;
+const mapStateToProps = state => ({
+    cartContent: state.cartContent
+});
+
+const mapDispatchToProps = dispatch => ({
+    deleteItem: item => dispatch(deleteItem(item)),
+    openEditItemModal: item => dispatch(openEditItemModal(item))
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(CartContent);
