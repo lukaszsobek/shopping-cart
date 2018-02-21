@@ -3,36 +3,12 @@ import {
     CLEAR_ALL,
     CLOSE_MODAL,
     DELETE_ITEM,
-    OPEN_ADD_ITEM_MODAL
+    OPEN_ADD_ITEM_MODAL,
+    OPEN_EDIT_ITEM_MODAL,
+    UPDATE_ITEM
 } from "../constants";
 
-const initialState = {
-    availableProducts: [
-        {
-            name: "Product1",
-            comments: "",
-            net_price: 8.00,
-            tax: 19
-        },{
-            name: "Product2",
-            comments: "",
-            net_price: 11.00,
-            tax: 19
-        },{
-            name: "Product3",
-            comments: "",
-            net_price: 16.25,
-            tax: 7
-        },{
-            name: "Product4",
-            comments: "",
-            net_price: 12.00,
-            tax: 7
-        }
-    ],
-    cartContent: [],
-    isModalShown: false
-};
+import initialState from "../assets/fixtures/initialState";
 
 const rootReducer = (state = initialState, action) => {
 
@@ -54,6 +30,7 @@ const rootReducer = (state = initialState, action) => {
         case CLOSE_MODAL:
             return {
                 ...state,
+                editItemId: null,
                 isModalShown: false
             }
 
@@ -61,14 +38,31 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 cartContent: cartContent.filter((item,id) => {
-                    return id !== action.deleteItemId;
+                    return id !== action.itemId;
                 })
+            }
+
+        case OPEN_EDIT_ITEM_MODAL: 
+            return {
+                ...state,
+                isModalShown: true,
+                editItemId: action.itemId
             }
 
         case OPEN_ADD_ITEM_MODAL:
             return {
                 ...state,
                 isModalShown: true
+            }
+
+        case UPDATE_ITEM:
+            const { itemId, item } = action;
+
+            const newCartContent = [...state.cartContent];
+            newCartContent[itemId] = item;
+
+            return {
+                cartContent: newCartContent 
             }
 
         default:

@@ -101,17 +101,25 @@ button.add-item {
 }
 
 .item-number      { width: 25px; }
-.item-name        { width: 140px; }
+.item-name        { width: 120px; }
 .item-comments    { width: 140px; }
 .item-net-price   { width: 80px; }
 .item-tax         { width: 80px; }
 .item-gross-price { width: 80px; }
-.delete-item      { width: 30px; }
+.action-buttons   { }
+
+.action-buttons button {
+  display: inline-block;
+}
 
 .delete-item-button {
   padding: 2px 5px;
   color: var(--white);
   background: var(--red);
+}
+
+.edit-item-button {
+  padding: 2px 5px;
 }
 
 .no-items {

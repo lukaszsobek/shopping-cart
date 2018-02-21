@@ -7,17 +7,25 @@ clone the repo, and then:
 Currently implemented features:
 - Can add item from predefined list to cart
 - Can set individual comment on item to add
-- Can clear whole cart
+- Can edit item
 - Can delete singular item
+- Can clear whole cart
 - Can see cart summary below cart (net + gross)
 - Can see tax amounts separated by tax amount
 
+Known bugs:
+- Trying to edit an item for the second time crashes the application
+
 Currently missing features:
-- Editing items
 - Tests (only render is tested)
+- Flowtype
+- Handling network problems (no-connection, slow connection etc.)
 
 Planned refactors:
 - Make CartContent a container to make testing easier
+- Modal state and id should be in one property
+- Property names should reflect whether an id or item is passed
+- Remove unused actions
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

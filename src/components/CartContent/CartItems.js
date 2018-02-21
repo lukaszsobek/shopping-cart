@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import CartItem from "./CartItem";
 
-import { deleteItem } from "../../actions";
+import { deleteItem, openEditItemModal } from "../../actions";
 
 import { connect } from "react-redux";
 
 class CartItems extends Component {
 
     render() {
-        const { cartContent, deleteItem } = this.props;
+        const { cartContent, deleteItem, openEditItemModal } = this.props;
 
         if(!cartContent.length) {
             return (
@@ -29,6 +29,7 @@ class CartItems extends Component {
                     net_price={ item.net_price }
                     tax={ item.tax }
                     deleteItem={ deleteItem }
+                    openEditItemModal={ openEditItemModal }
                 />
             );
         });
@@ -41,7 +42,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    deleteItem: item => dispatch(deleteItem(item))
+    deleteItem: item => dispatch(deleteItem(item)),
+    openEditItemModal: item => dispatch(openEditItemModal(item))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartItems);
