@@ -68,8 +68,6 @@ class ModalForm extends Component {
             sourceId: productIndex
         }
 
-        console.log(this.state)
-
        if(!this.isEditingItem) {
             addItem(item);
        } else {
@@ -113,14 +111,11 @@ class ModalForm extends Component {
                     }
                 />  
             </form>
-        )
+        );
     }
 }
 
 const mapStateToProps = state => {
-
-    console.log(state);
-
     return {
         availableProducts: state.availableProducts,
         cartContent: state.cartContent,
