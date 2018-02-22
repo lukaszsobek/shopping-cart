@@ -16,12 +16,11 @@ A React/Redux Shopping Cart App with:
 - Can see cart summary below cart (net + gross)
 - Can see tax amounts separated by tax %
 
-### Tests available:
-- Application render
-- Actions
+### Test coverage:
+- Application render, actions, reducers
 
 ### Currently missing features:
-- more tests (for reducers, store, components, utils)
+- more tests (for store, components, utils)
 - Flowtype
 - Handling network problems (no-connection, slow connection etc.)
 
