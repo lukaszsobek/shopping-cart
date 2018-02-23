@@ -17,10 +17,10 @@ A React/Redux Shopping Cart App with:
 - Can see tax amounts separated by tax %
 
 ### Test coverage:
-- Application render, actions, reducers, state, utils
+- Application render, actions, reducers, exported dumb components, state, utils
 
 ### Currently missing features:
-- Component tests
+- Testing smart components (and smaller functions inside smart component files)
 - Flowtype
 - Handling network problems (no-connection, slow connection etc.)
 

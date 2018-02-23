@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders cart item 1`] = `
+<div
+  className="cart-item"
+>
+  <div
+    className="item-number"
+  >
+    1
+  </div>
+  <div
+    className="item-name"
+  >
+    some item
+  </div>
+  <div
+    className="item-comments"
+  >
+    test
+  </div>
+  <div
+    className="item-net-price"
+  >
+    10.28
+    €
+  </div>
+  <div
+    className="item-tax"
+  >
+    7%
+  </div>
+  <div
+    className="item-gross-price"
+  >
+    11
+    €
+  </div>
+  <div
+    className="action-buttons"
+  >
+    <Button
+      action={[Function]}
+      className="edit-item-button"
+      label="✎"
+    />
+    <Button
+      action={[Function]}
+      className="delete-item-button"
+      label="x"
+    />
+  </div>
+</div>
+`;

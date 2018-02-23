@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Button from "../shared/Button";
 import { addItem, updateItem, closeModal } from "../../actions";
 
-const ConstructDropdown = (props) => {
+export const ConstructDropdown = (props) => {
 
     const { productList } = props;
 
@@ -22,7 +22,6 @@ const ConstructDropdown = (props) => {
         <select
             name={ props.name }
             className={ props.className }
-            //value={ selectedItem ? selectedItem : 0 }
         >
             {listOptions}
         </select>

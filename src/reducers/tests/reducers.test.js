@@ -1,6 +1,6 @@
-import reducer from '../reducers'
-import * as types from '../constants'
-import initialState from "../assets/fixtures/initialState"
+import reducer from "../";
+import * as types from "../../constants";
+import initialState from "../../assets/fixtures/initialState"
 
 describe("Reducer handles", () => {
 

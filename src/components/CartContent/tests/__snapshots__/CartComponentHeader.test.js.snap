@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders header of cart content 1`] = `
+<div
+  className="cart-content-header"
+>
+  <div
+    className="item-number"
+  >
+    #
+  </div>
+  <div
+    className="item-name"
+  >
+    Name
+  </div>
+  <div
+    className="item-comments"
+  >
+    Comments
+  </div>
+  <div
+    className="item-net-price"
+  >
+    Price
+  </div>
+  <div
+    className="item-tax"
+  >
+    Tax
+  </div>
+  <div
+    className="item-gross-price"
+  >
+    Total Item
+  </div>
+</div>
+`;

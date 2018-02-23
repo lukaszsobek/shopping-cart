@@ -1,4 +1,4 @@
-import { currencyRound } from "../utils";
+import { currencyRound } from "../";
 
 describe("Rounds values", () => {
     it("to 2nd decimal point", () => {

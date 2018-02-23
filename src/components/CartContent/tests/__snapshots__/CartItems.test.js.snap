@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders cart with 1 item 1`] = `
+Array [
+  <CartItem
+    comments="none"
+    deleteItem={[Function]}
+    id={0}
+    name="test item"
+    net_price={12.12}
+    number={1}
+    openEditItemModal={[Function]}
+    tax={7}
+/>,
+]
+`;
+
+exports[`Renders cart with 2 items 1`] = `
+Array [
+  <CartItem
+    comments="none"
+    deleteItem={[Function]}
+    id={0}
+    name="test item"
+    net_price={12.12}
+    number={1}
+    openEditItemModal={[Function]}
+    tax={7}
+/>,
+  <CartItem
+    comments="none"
+    deleteItem={[Function]}
+    id={1}
+    name="test item"
+    net_price={12.12}
+    number={2}
+    openEditItemModal={[Function]}
+    tax={7}
+/>,
+]
+`;
+
+exports[`Renders cart without items 1`] = `
+<div
+  className="no-items"
+>
+  Add an item to the cart
+</div>
+`;

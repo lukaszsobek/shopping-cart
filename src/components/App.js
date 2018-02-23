@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../assets/styles/App.css';
+import React, { Component } from "react";
+import "../assets/styles/App.css";
 
 import CartHeader from "./CartHeader";
 import CartContent from "./CartContent";
