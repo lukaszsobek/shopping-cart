@@ -53,7 +53,7 @@ class CartSummary extends Component {
 
                 <div className="net-total">
                     <div className="label">Net Total</div>
-                    <div className="value">{ net_total }&euro;</div>
+                    <div className="value">{ currencyRound(net_total) }&euro;</div>
                 </div>
 
                 {this.constructTaxSummary(tax_breakdown)}

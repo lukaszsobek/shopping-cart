@@ -19,13 +19,13 @@ class CartHeader extends Component {
                 <div className="button-container">
 
                     <Button
-                        className="clear-cart"
+                        className="clear-cart-button"
                         action={ clearAllItems }
                         label="Clear Cart"
                     />
 
                     <Button
-                        className="add-item"
+                        className="add-item-button"
                         action={ openAddItemModal }
                         label="Add Product"
                     />

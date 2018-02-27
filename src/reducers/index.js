@@ -8,7 +8,14 @@ import {
     UPDATE_ITEM
 } from "../constants";
 
-import initialState from "../assets/fixtures/initialState";
+import availableProducts from "../assets/fixtures/availableProducts";
+
+const initialState = {
+    availableProducts,
+    cartContent: [],
+    editItemId: null,
+    isModalShown: false
+}
 
 const rootReducer = (state = initialState, action) => {
 

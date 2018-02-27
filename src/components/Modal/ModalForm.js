@@ -78,6 +78,9 @@ class ModalForm extends Component {
 
     render() {
         const { availableProducts, editItemId } = this.props;
+        const cartLabel = editItemId === null
+            ? "Add to Cart"
+            : "Update item";
 
         return (
             <form
@@ -85,29 +88,31 @@ class ModalForm extends Component {
                 name="modalPanelForm"
                 onSubmit={ e => this.handleSubmit(e) }
             >
+                <h3>{ cartLabel }</h3>
 
-                <ConstructDropdown
-                    productList={ availableProducts }
-                    selectedItem={ editItemId }
-                    name="productDropdown"
-                    className="product-dropdown"
-                />
+                <div className="product-selection-wrapper">
+                    <label htmlFor="productDropdown">Product:</label><br/>
+                    <ConstructDropdown
+                        productList={ availableProducts }
+                        selectedItem={ editItemId }
+                        name="productDropdown"
+                        id="productDropdown"
+                        className="product-dropdown"
+                    />
+                </div>
 
-                <div className="input-wrapper">
-                    <label>Comment:</label><br/>
+                <div className="product-comment-wrapper">
+                    <label htmlFor="productComment">Comment:</label><br/>
                     <input
                         name="productComment"
+                        id="productComment"
                         className="product-comment"
                     />
                 </div>
 
                 <Button
-                    className="add-item"
-                    label={
-                        editItemId === null
-                        ? "Add to Cart"
-                        : "Update item"
-                    }
+                    className="add-item-button"
+                    label={ cartLabel }
                 />  
             </form>
         );
