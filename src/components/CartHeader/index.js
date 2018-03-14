@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Button from "../shared/Button";
 import { clearAllItems, openAddItemModal } from "../../actions";
 
-class CartHeader extends Component {
+export class CartHeader extends Component {
 
     render() {
         const { clearAllItems, openAddItemModal } = this.props

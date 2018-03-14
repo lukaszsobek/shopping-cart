@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartHeader renders 1`] = `
+<div
+  className="top-bar"
+>
+  <div
+    className="app-title"
+  >
+    Shopping cart
+  </div>
+  <div
+    className="button-container"
+  >
+    <Button
+      action={[Function]}
+      className="clear-cart-button"
+      label="Clear Cart"
+    />
+    <Button
+      action={[Function]}
+      className="add-item-button"
+      label="Add Product"
+    />
+  </div>
+</div>
+`;

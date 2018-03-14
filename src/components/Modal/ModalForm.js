@@ -28,7 +28,7 @@ export const ConstructDropdown = (props) => {
     );
 }
 
-class ModalForm extends Component {
+export class ModalForm extends Component {
 
     componentDidMount() {
         const { editItemId, cartContent } = this.props;

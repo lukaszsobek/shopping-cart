@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalForm constructs dropdown 1`] = `
+<select
+  className="testClass"
+  name="testName"
+>
+  <option
+    value={0}
+  >
+    test1
+  </option>
+  <option
+    value={1}
+  >
+    test2
+  </option>
+</select>
+`;
+
+exports[`ModalForm renders 1`] = `
+<form
+  id="modal-panel-form"
+  name="modalPanelForm"
+  onSubmit={[Function]}
+>
+  <h3>
+    Update item
+  </h3>
+  <div
+    className="product-selection-wrapper"
+  >
+    <label
+      htmlFor="productDropdown"
+    >
+      Product:
+    </label>
+    <br />
+    <Unknown
+      className="product-dropdown"
+      id="productDropdown"
+      name="productDropdown"
+      productList={
+        Array [
+          Object {
+            "name": "test1",
+          },
+          Object {
+            "name": "test2",
+          },
+        ]
+      }
+      selectedItem={undefined}
+    />
+  </div>
+  <div
+    className="product-comment-wrapper"
+  >
+    <label
+      htmlFor="productComment"
+    >
+      Comment:
+    </label>
+    <br />
+    <input
+      className="product-comment"
+      id="productComment"
+      name="productComment"
+    />
+  </div>
+  <Button
+    className="add-item-button"
+    label="Update item"
+  />
+</form>
+`;

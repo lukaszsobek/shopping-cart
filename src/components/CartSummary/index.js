@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { currencyRound } from "../../utils";
 
-class CartSummary extends Component {
+export class CartSummary extends Component {
 
     // calculates the values needed to create the cart summary
     calculateSummary(itemArray) {

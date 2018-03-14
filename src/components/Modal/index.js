@@ -7,7 +7,7 @@ import Button from "../shared/Button";
 
 import ModalForm from "./ModalForm" ;
 
-class Modal extends Component {
+export class Modal extends Component {
     render() {
         const { closeModal, isModalShown } = this.props;
 

@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartSummary constructs summary 1`] = `
+Array [
+  <div
+    className="tax-rate"
+>
+    <div
+        className="label"
+    >
+        5
+        %
+    </div>
+    <div
+        className="value"
+    >
+        1
+        €
+    </div>
+</div>,
+  <div
+    className="tax-rate"
+>
+    <div
+        className="label"
+    >
+        10
+        %
+    </div>
+    <div
+        className="value"
+    >
+        2
+        €
+    </div>
+</div>,
+]
+`;
+
+exports[`CartSummary renders component 1`] = `
+<div
+  className="cart-summary"
+>
+  <div
+    className="net-total"
+  >
+    <div
+      className="label"
+    >
+      Net Total
+    </div>
+    <div
+      className="value"
+    >
+      40
+      €
+    </div>
+  </div>
+  <div
+    className="tax-rate"
+  >
+    <div
+      className="label"
+    >
+      5
+      %
+    </div>
+    <div
+      className="value"
+    >
+      1
+      €
+    </div>
+  </div>
+  <div
+    className="tax-rate"
+  >
+    <div
+      className="label"
+    >
+      10
+      %
+    </div>
+    <div
+      className="value"
+    >
+      2
+      €
+    </div>
+  </div>
+  <div
+    className="gross-total"
+  >
+    <div
+      className="label"
+    >
+      Grand Total
+    </div>
+    <div
+      className="value"
+    >
+      43
+      €
+    </div>
+  </div>
+</div>
+`;

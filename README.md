@@ -2,6 +2,10 @@ A React/Redux Shopping Cart App with:
 - JavaScript, ES6, React, JSX, Redux, Jest 
 - 10 items to choose from with different names, prices and tax %
 
+## Working demo:
+
+https://lukaszsobek.com/repo/shopping-cart/
+
 ![shopping_cart_thumbnail](https://user-images.githubusercontent.com/23530054/36751281-0a64ac34-1c00-11e8-8cc9-74388bcf05ac.png)
 
 ### Clone the repo, and then:
@@ -20,12 +24,5 @@ A React/Redux Shopping Cart App with:
 - Can see tax amounts separated by tax %
 
 ### Test coverage:
-- Application render, actions, reducers, exported dumb components, state, utils
+- Application render, actions, reducers, components (smart + dumb), state, utils
 
-### Currently missing features:
-- Testing smart components (and smaller functions inside smart component files)
-- Flowtype
-- Handling network problems (no-connection, slow connection etc.)
-
-
-Bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
